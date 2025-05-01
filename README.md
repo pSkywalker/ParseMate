@@ -8,7 +8,7 @@
 <h1>🧩 ParseMate</h1>
 <p>A flexible, zero-dependency TypeScript class for parsing command-line arguments with support for multi-value flags, default values, required arguments, and rich help output.</p>
 
-<img width="332" height="253" src="https://github.com/user-attachments/assets/cea68ed4-ed82-4969-9725-a2e4314276ef"/>
+<img width="298" height="253" src="https://github.com/user-attachments/assets/8bc7b0de-ef87-4921-bb1c-7a8fbf7d9a1d"/>
 
 <hr>
 
