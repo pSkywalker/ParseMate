@@ -1,6 +1,6 @@
 {
   "name": "parsemate",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A tool for building easy argv parsing in app, coupled with a \"--help\" me generator ",
   "license": "MIT",
   "author": "pSkywalker",
