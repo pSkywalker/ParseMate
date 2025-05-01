@@ -1,10 +1,11 @@
 import { ArgSpec } from './interfaces/ArgSpec';
 export type ArgDefinition = Record<string, ArgSpec>;
 export declare class ArgvParser {
+    private appName;
     private args;
     private definitions;
     private result;
-    constructor(definitions: ArgDefinition);
+    constructor(appName: string, definitions: ArgDefinition);
     private parse;
     getArg(name: string): any;
     getAll(): Record<string, any>;
@@ -15,5 +16,5 @@ export declare class ArgvParser {
         key: string;
         spec: ArgSpec;
     }[];
-    generateHelp(appName?: string): string;
+    generateHelp(appName: string): string;
 }

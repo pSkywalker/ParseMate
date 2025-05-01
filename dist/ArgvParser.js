@@ -2,8 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ArgvParser = void 0;
 class ArgvParser {
-    constructor(definitions) {
+    constructor(appName, definitions) {
         this.result = {};
+        this.appName = appName;
         this.args = process.argv.slice(2);
         this.definitions = definitions;
         this.parse();
@@ -38,7 +39,7 @@ class ArgvParser {
                 (Array.isArray(value) && value.length === 0));
             if (isMissing) {
                 console.error(`❌ Missing required argument: ${spec.flags.join(', ')}`);
-                console.log('\n' + this.generateHelp());
+                console.log('\n' + this.generateHelp(this.appName));
                 process.exit(1);
             }
         }
@@ -65,7 +66,7 @@ class ArgvParser {
     get definitionList() {
         return Object.entries(this.definitions).map(([key, spec]) => ({ key, spec }));
     }
-    generateHelp(appName = 'yourScript.js') {
+    generateHelp(appName) {
         const lines = [
             `╭──────────────────────────────────────────────╮`,
             `│              📄 Command Line Usage            │`,
@@ -124,23 +125,3 @@ class ArgvParser {
     }
 }
 exports.ArgvParser = ArgvParser;
-const parser = new ArgvParser({
-    folder: {
-        flags: ['-f', '--folder'],
-        description: 'Folder to scan',
-        required: true,
-        multiple: true,
-    },
-    tech: {
-        flags: ['-t', '--tech'],
-        description: 'Technologies to process',
-        multiple: true,
-        default: ['html', 'css'],
-    },
-    output: {
-        flags: ['-o', '--output'],
-        description: 'Output folder',
-        default: 'dist',
-    },
-});
-console.log(parser.getAll());
