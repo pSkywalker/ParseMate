@@ -22,7 +22,7 @@
 
 <h2>📦 Installation</h2>
 <p>This is a self-contained utility. Just include <code>ArgvParser.ts</code> and <code>ArgSpec.ts</code> in your project.</p>
-<p>Or install from a custom or private npm registry:</p>
+<p>Or install from npm:</p>
 <pre><code>npm install argv-parser</code></pre>
 <pre><code>npm install </code></pre>
 <hr>
