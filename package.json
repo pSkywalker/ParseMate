@@ -1,5 +1,5 @@
 {
-  "name": "argv_parser",
+  "name": "ParseLine",
   "version": "0.0.1",
   "description": "A tool for building easy argv parsing in app, coupled with a \"--help\" me generator ",
   "license": "ISC",
