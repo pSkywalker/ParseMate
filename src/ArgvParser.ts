@@ -4,11 +4,14 @@ import { ArgSpec } from './interfaces/ArgSpec';
   export type ArgDefinition = Record<string, ArgSpec>;
   
   export class ArgvParser {
+    private appName: string;
     private args: string[];
     private definitions: ArgDefinition;
     private result: Record<string, any> = {};
   
-    constructor(definitions: ArgDefinition) {
+    constructor(appName : string,definitions: ArgDefinition) {
+      this.appName = appName
+
       this.args = process.argv.slice(2);
       this.definitions = definitions;
       this.parse();
@@ -47,7 +50,7 @@ import { ArgSpec } from './interfaces/ArgSpec';
         );
         if (isMissing) {
           console.error(`❌ Missing required argument: ${spec.flags.join(', ')}`);
-          console.log('\n' + this.generateHelp());
+          console.log('\n' + this.generateHelp( this.appName ));
           process.exit(1);
         }
     }
@@ -80,7 +83,7 @@ import { ArgSpec } from './interfaces/ArgSpec';
         return Object.entries(this.definitions).map(([key, spec]) => ({ key, spec }));
     }
     
-    generateHelp(appName = 'yourScript.js'): string {
+    generateHelp(appName:string): string {
         const lines = [
           `╭──────────────────────────────────────────────╮`,
           `│              📄 Command Line Usage            │`,
@@ -141,4 +144,6 @@ import { ArgSpec } from './interfaces/ArgSpec';
         return lines.join('\n');
       }
   }
+  
+
   
