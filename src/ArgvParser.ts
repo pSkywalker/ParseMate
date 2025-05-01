@@ -142,24 +142,3 @@ import { ArgSpec } from './interfaces/ArgSpec';
       }
   }
   
-const parser = new ArgvParser({
-  folder: {
-    flags: ['-f', '--folder'],
-    description: 'Folder to scan',
-    required: true,
-    multiple: true,
-  },
-  tech: {
-    flags: ['-t', '--tech'],
-    description: 'Technologies to process',
-    multiple: true,
-    default: ['html', 'css'],
-  },
-  output: {
-    flags: ['-o', '--output'],
-    description: 'Output folder',
-    default: 'dist',
-  },
-});
-
-console.log(parser.getAll());
