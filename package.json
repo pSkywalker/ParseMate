@@ -1,0 +1,20 @@
+{
+  "name": "arg-parser",
+  "version": "0.0.1",
+  "description": "A tool for building easy argv parsing in app, coupled with a \"--help\" me generator ",
+  "license": "ISC",
+  "author": "pSkywalker",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+    "dependencies": {
+      "@types/node": "^22.15.2"
+    },
+    "devDependencies": {
+    }
+  
+  
+}
