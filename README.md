@@ -49,10 +49,10 @@
       default: 'dist',
     },
   });
-
-  for (const [key, value] of parser.entries) {
-    console.log(`${key}:`, value);
-  }
+  
+    for (const [key, value] of parser.entries) {
+      console.log(`${key}:`, value);
+    }
 })();
 </code></pre>
 <hr>
