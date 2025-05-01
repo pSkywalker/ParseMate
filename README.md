@@ -7,7 +7,7 @@
 
 <h1>🧩 CmdCraft</h1>
 <p>A flexible, zero-dependency TypeScript class for parsing command-line arguments with support for multi-value flags, default values, required arguments, and rich help output.</p>
-
+<img width="200" height="200" src="https://github.com/user-attachments/assets/e9b6f263-2a50-452e-9dd5-c6785ebbc3bb"/>
 <hr>
 
 <h2>🚀 Features</h2>
