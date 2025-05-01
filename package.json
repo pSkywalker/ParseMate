@@ -1,5 +1,5 @@
 {
-  "name": "arg-parser",
+  "name": "argv_parser",
   "version": "0.0.1",
   "description": "A tool for building easy argv parsing in app, coupled with a \"--help\" me generator ",
   "license": "ISC",
@@ -7,6 +7,23 @@
   "type": "commonjs",
   "main": "index.js",
   "types": "dist/index.d.ts",
+  "keywords": [
+    "argv",
+    "argparser",
+    "cli",
+    "command-line",
+    "command-line-parser",
+    "args",
+    "flags",
+    "argument-parser",
+    "nodejs",
+    "node",
+    "cli-tool",
+    "command-line-interface",
+    "options",
+    "node-args",
+    "typescript"
+],
   "exports": {
     "import": "./dist/index.js",
     "require": "./dist/index.js"
