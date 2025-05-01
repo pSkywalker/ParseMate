@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>🧩 ParseMate</h1>
+<h1>🧩 ParseMate <img src="https://img.shields.io/npm/v/parsemate"/> <img src="https://img.shields.io/npm/l/parsemate"/></h1>
 <p>A flexible, zero-dependency TypeScript class for parsing command-line arguments with support for multi-value flags, default values, required arguments, and rich help output.</p>
 
 <img width="298" height="253" src="https://github.com/user-attachments/assets/8bc7b0de-ef87-4921-bb1c-7a8fbf7d9a1d"/>
@@ -26,11 +26,10 @@
 <p>This is a self-contained utility. Just include <code>ArgvParser.ts</code> and <code>ArgSpec.ts</code> in your project.</p>
 <p>Or install from npm:</p>
 <pre><code>npm install parsemate</code></pre>
-<pre><code>npm install </code></pre>
 <hr>
 
 <h2>📄 Usage</h2>
-<pre><code>import { ArgvParser } from './ArgvParser';
+<pre><code>import { ArgvParser } from "parsemate";
   ( () =&gt; {
   const parser = new ArgvParser({
     folder: {
@@ -75,7 +74,7 @@
 <img src="https://github.com/user-attachments/assets/7cd0fa39-9156-45ee-a97e-1cc5ac6a016a"/>
 <h2>🧪 API Reference</h2>
 <ul>
-  <li><code>constructor(defs: ArgDefinition)</code> – Initialize with a map of argument specs.</li>
+  <li><code>constructor(appName: String, defs: ArgDefinition)</code> – Initialize with a map of argument specs.</li>
   <li><code>getArg(name: string)</code> – Get the parsed value for a specific argument.</li>
   <li><code>getAll()</code> – Get all parsed arguments as an object.</li>
   <li><code>keys</code> – Array of all argument names.</li>

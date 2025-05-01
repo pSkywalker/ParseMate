@@ -53,14 +53,14 @@ import { ArgSpec } from './interfaces/ArgSpec';
           console.log('\n' + this.generateHelp( this.appName ));
           process.exit(1);
         }
-    }
+      }
     }
   
-    getArg(name: string): any {
+    public getArg(name: string): any {
       return this.result[name];
     }
   
-    getAll(): Record<string, any> {
+    public getAll(): Record<string, any> {
       return this.result;
     }
       // Return list of argument names (e.g., ['folder', 'tech', 'output'])
@@ -83,7 +83,7 @@ import { ArgSpec } from './interfaces/ArgSpec';
         return Object.entries(this.definitions).map(([key, spec]) => ({ key, spec }));
     }
     
-    generateHelp(appName:string): string {
+    public generateHelp(appName:string): string {
         const lines = [
           `╭──────────────────────────────────────────────╮`,
           `│              📄 Command Line Usage            │`,
