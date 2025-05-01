@@ -5,9 +5,11 @@
 </head>
 <body>
 
-<h1>🧩 CmdCraft</h1>
+<h1>🧩 ParseMate</h1>
 <p>A flexible, zero-dependency TypeScript class for parsing command-line arguments with support for multi-value flags, default values, required arguments, and rich help output.</p>
-<img width="200" height="200" src="https://github.com/user-attachments/assets/e9b6f263-2a50-452e-9dd5-c6785ebbc3bb"/>
+
+<img width="200" height="200" src="https://github.com/user-attachments/assets/cea68ed4-ed82-4969-9725-a2e4314276ef"/>
+
 <hr>
 
 <h2>🚀 Features</h2>
@@ -23,7 +25,7 @@
 <h2>📦 Installation</h2>
 <p>This is a self-contained utility. Just include <code>ArgvParser.ts</code> and <code>ArgSpec.ts</code> in your project.</p>
 <p>Or install from npm:</p>
-<pre><code>npm install argv-parser</code></pre>
+<pre><code>npm install parsemate</code></pre>
 <pre><code>npm install </code></pre>
 <hr>
 
