@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>🧩 ArgvParser</h1>
+<h1>🧩 CmdCraft</h1>
 <p>A flexible, zero-dependency TypeScript class for parsing command-line arguments with support for multi-value flags, default values, required arguments, and rich help output.</p>
 
 <hr>
