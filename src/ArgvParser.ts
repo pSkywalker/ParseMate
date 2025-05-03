@@ -106,22 +106,30 @@ import { ArgSpec } from './interfaces/ArgSpec';
             lines.push(`                             (default: ${def})`);
           }
           // Add example if known
-          if (key === 'tech') {
-            lines.push(`                             Example: -t html css javascript`);
-          } else if (key === 'folder') {
-            lines.push(`                             Example: -f ./src ./pages`);
-          } else if (key === 'output') {
-            lines.push(`                             Example: -o dist`);
-          }
+          lines.push(`                             Example: --`+key+` arg1 arg2`);
+          
           lines.push('');
         }
-      
+        
         // EXAMPLES
         lines.push(`EXAMPLES:`);
-        lines.push(`  node ${appName} -f ./website -t html css`);
-        lines.push(`  node ${appName} --folder ./app --tech html javascript --output build`);
+        
         lines.push('');
-      
+        let sampleLine = "node " + appName + " ";
+        let allRequired = [];
+        for (const key in this.definitions) {
+          const spec = this.definitions[key];
+          const flag = spec.flags[0];
+          if (spec.required) {
+            allRequired.push( flag );
+          }
+        }
+        
+        for( let x = 0; x < allRequired.length; x++ ){ 
+          sampleLine += allRequired[x] + ` arg1 `;
+        }
+        lines.push( sampleLine );
+        lines.push( "" );
         // NOTES
         lines.push(`NOTES:`);
         for (const key in this.definitions) {
@@ -144,6 +152,4 @@ import { ArgSpec } from './interfaces/ArgSpec';
         return lines.join('\n');
       }
   }
-  
-
   
