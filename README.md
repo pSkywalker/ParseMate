@@ -30,7 +30,7 @@
 
 <h2>📄 Usage</h2>
 <pre><code>import { ArgvParser } from "parsemate";
-  ( () =&gt; {
+( () =&gt; {
   const appName = "test.js";      
   const parser = new ArgvParser( appName , {
     folder: {
