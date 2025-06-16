@@ -83,7 +83,7 @@ import { ArgSpec } from './interfaces/ArgSpec';
         return Object.entries(this.definitions).map(([key, spec]) => ({ key, spec }));
     }
     
-    public generateHelp(appName:string): string {
+    public generateHelp(appName:string = this.appName): string {
         const lines = [
           `╭──────────────────────────────────────────────╮`,
           `│              📄 Command Line Usage            │`,

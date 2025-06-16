@@ -31,7 +31,8 @@
 <h2>📄 Usage</h2>
 <pre><code>import { ArgvParser } from "parsemate";
   ( () =&gt; {
-  const parser = new ArgvParser({
+  const appName = test.js;      
+  const parser = new ArgvParser( appName , {
     folder: {
       flags: ['-f', '--folder'],
       description: 'Folder to scan',
